@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ignite the Passion: Unforgettable Encounters Await! ✨</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-02ZN82S10H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-02ZN82S10H');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #ff3366; /* Vibrant Pink */
+            --secondary-color: #ffcc00; /* Golden Yellow */
+            --dark-bg: rgba(0, 0, 0, 0.7);
+            --text-light: #f0f0f0;
+            --text-accent: #ffeb3b;
+            --button-gradient-start: #ff3366;
+            --button-gradient-end: #ff6600;
+            --container-shadow: rgba(255, 0, 85, 0.6);
+            --blur-strength: 15px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                        url('https://raw.githubusercontent.com/luciaadrianex/touchmenow/refs/heads/main/fotos/touchmenow01.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 500px;
+            background: var(--dark-bg);
+            backdrop-filter: blur(var(--blur-strength));
+            -webkit-backdrop-filter: blur(var(--blur-strength));
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 0 35px var(--container-shadow);
+            border: 1px solid rgba(255, 51, 102, 0.3);
+            transform: translateY(0);
+            animation: fadeInScale 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: translateY(20px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 800;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .headline {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: var(--text-light);
+            line-height: 1.4;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--button-gradient-start), var(--button-gradient-end));
+            color: #fff;
+            padding: 18px 38px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            border: none;
+            border-radius: 60px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(255, 51, 102, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            text-transform: uppercase;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            transform: skewX(-20deg);
+            z-index: -1;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(255, 51, 102, 0.8);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); box-shadow: 0 12px 28px rgba(255, 51, 102, 0.7); }
+            100% { transform: scale(1); }
+        }
+
+        .confirmation {
+            margin-top: 25px;
+            font-size: 0.95rem;
+            color: var(--text-accent);
+            font-weight: 700;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: rgba(255, 204, 0, 0.1);
+        }
+
+        .features {
+            margin-top: 30px;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .features li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .headline { font-size: 1.1rem; }
+            .cta-button { padding: 15px 30px; font-size: 1.3rem; }
+            .container { padding: 30px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            .headline { font-size: 1rem; }
+            .cta-button { padding: 12px 25px; font-size: 1.1rem; }
+            .container { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Next Connection Is Here! 🔥</h1>
+        <div class="headline">Tired of fake profiles? Discover now thousands of real people, ready for a casual encounter or a vibrant romance. The adventure starts with a click!</div>
+        <a href="https://bggceig.bustyaffar.com/s/63e52f386cf44" class="cta-button">Click to Find Your Passion!</a>
+        <div class="confirmation">⚠️ Exclusive access for adults. Confirm your email to unlock all profiles.</div>
+        <ul class="features">
+            <li>✓ **100% Authentic Profiles:** Say goodbye to bots.</li>
+            <li>✓ **Complete Privacy:** Your secret is safe with us.</li>
+            <li>✓ **Instant Connection:** Find your match in seconds.</li>
+        </ul>
+    </div>
+</body>
+</html>
